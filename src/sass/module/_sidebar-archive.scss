@@ -1,0 +1,84 @@
+@use "global" as *;
+
+
+.sidebar-archive {
+  color: $blue;
+  font-size: rem(24);
+  font-family: $base-font-family;
+  margin-top: rem(24);
+}
+
+.sidebar-archive a {
+  padding-left: rem(32);
+  position: relative;
+}
+.sidebar-archive button {
+  padding-left: rem(32);
+  position: relative;
+}
+
+
+.sidebar-archive a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../images/common/polygon1.svg");
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: rem(24);
+  height: rem(24);
+  background-size: contain;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  @include mq(md) {}
+}
+
+.sidebar-archive.open button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../images/common/polygon2.svg");
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: rem(24);
+  height: rem(24);
+  background-size: contain;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  @include mq(md) {}
+}
+.sidebar-archive button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../images/common/polygon1.svg");
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: rem(24);
+  height: rem(24);
+  background-size: contain;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  @include mq(md) {}
+}
+
+.sidebar-archive ul {
+  cursor: pointer;
+}
+
+.sidebar-archive li {
+  display: none;
+  cursor: pointer;
+  padding-left: rem(32);
+  position: relative;
+}
+
+.sidebar-archive.open li {
+  display: block;
+}

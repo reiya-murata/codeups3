@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.card-icon {
+  grid-row: 2;
+  display: inline-block;
+  color: $blue;
+  font-size: rem(12);
+  padding: rem(5) rem(11);
+  font-family: $base-font-family;
+  border: rem(1) solid $blue;
+  width: fit-content;
+  @include mq(md) {
+    grid-row: 1;
+    font-size: rem(12);
+    padding: rem(6) rem(16);
+  }
+}

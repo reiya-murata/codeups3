@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.page-tab {
+  display: inline-block;
+  color: $blue;
+  font-size: rem(14);
+  padding: rem(6) 0;
+  font-family: $base-font-family;
+  border: rem(1) solid $blue;
+  width: rem(162);
+  @include mq(md) {
+    grid-row: 1;
+    font-size: rem(14);
+  }
+}
+
+
+.page-tab--all.active{
+  color: $white;
+  background-color: $blue;
+}
+.page-tab--lisence.active{
+  color: $white;
+  background-color: $blue;
+}
+.page-tab--fan.active{
+  color: $white;
+  background-color: $blue;
+}
+.page-tab--experience.active{
+  color: $white;
+  background-color: $blue;
+}

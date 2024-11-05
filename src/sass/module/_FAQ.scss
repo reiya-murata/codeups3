@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.FAQ {
+  position: relative;
+}
+
+.FAQ__hero {
+  position: relative;
+}
+
+.FAQ__inner {
+  position: relative;
+  max-width: rem(345) + strip-unit($padding-sp) * 2;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq("md") {
+    max-width: rem(750);
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+.FAQ__category{
+  margin-top: rem(8);
+}
+.FAQ__contents{
+  margin-top: rem(52);
+  @include mq("md") {
+    margin-top: rem(150);
+  }
+}

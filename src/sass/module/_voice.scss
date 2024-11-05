@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.voice {
+  font-family: $base-font-family;
+  position: relative;
+  @include mq(md) {
+  }
+}
+
+.voice::before {
+  display: none;
+  @include mq(md) {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("../images/common/_ibaratatu.svg");
+    width: rem(71);
+    height: rem(162);
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    bottom: rem(-74);
+    right: calc(50vw - min(48vw , 33.8rem));
+    z-index: 20;
+  }
+}
+
+
+.voice__inner {
+  position: relative;
+  @include mq(md) {
+  }
+}
+
+.voice__cards {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(30);
+    padding: 0;
+  }
+}
+
+.voice__button {
+  text-align: center;
+  margin-top: rem(36);
+  @include mq(md) {
+    text-align: center;
+    margin-top: rem(80);
+  }
+}

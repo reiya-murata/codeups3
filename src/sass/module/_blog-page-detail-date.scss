@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.blog-detail-date {
+  font-weight: $regular;
+  font-family: $second-font-family;
+  font-size: rem(14);
+}

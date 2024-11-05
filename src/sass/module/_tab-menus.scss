@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.tab-menus {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  @include mq(md) {
+    justify-content: start;
+    flex-direction: initial;
+    gap: rem(32);
+  }
+}

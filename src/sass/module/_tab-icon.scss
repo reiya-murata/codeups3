@@ -1,0 +1,120 @@
+@use "global" as *;
+
+.tab-icon--1::before {
+  content: "";
+  display: none;
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    background-image: url("../images/common/whale-right-blue.svg");
+    top: 50%;
+    left: rem(30);
+    transform: translate(0, -50%);
+    width: rem(64);
+    height: rem(64);
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+.tab-icon--1.active::before {
+  content: "";
+  display: none;
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    background-image: url("../images/common/whale-right-white.svg");
+    top: 50%;
+    left: rem(30);
+    transform: translate(0, -50%);
+    width: rem(64);
+    height: rem(64);
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+
+.tab-icon--2 {
+  padding-right: rem(15);
+  @include mq(md) {
+    padding-right: rem(15);
+  }
+}
+
+.tab-icon--2::before {
+  content: "";
+  display: none;
+  position: absolute;
+  @include mq(md) {
+    display: block;
+    background-image: url("../images/common/whale-left-blue.svg");
+    top: 50%;
+    left: rem(18);
+    transform: translate(0, -50%);
+    width: rem(64);
+    height: rem(64);
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+
+.tab-icon--2.active::before {
+  content: "";
+  display: none;
+  position: absolute;
+  @include mq(md) {
+    display: block;
+    background-image: url("../images/common/whale-right-white.svg");
+    top: 50%;
+    left: rem(18);
+    transform: translate(0, -50%);
+    width: rem(64);
+    height: rem(64);
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+
+.tab-icon--3::before {
+  content: "";
+  display: none;
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    background-image: url("../images/common/fish-left-blue.svg");
+    top: 50%;
+    left: rem(30);
+    transform: translate(0, -50%);
+    width: rem(64);
+    height: rem(64);
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+.tab-icon--3.active::before {
+  content: "";
+  display: none;
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    background-image: url("../images/common/whale-right-white.svg");
+    top: 50%;
+    left: rem(30);
+    transform: translate(0, -50%);
+    width: rem(64);
+    height: rem(64);
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}

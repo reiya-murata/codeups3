@@ -1,0 +1,23 @@
+@use "global" as *;
+
+
+.blog-page-cards a {
+  display: block;
+  @include mq(md) {
+  }
+}
+
+.blog-page-cards {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  @include mq(md) {
+    display: grid;
+    gap: rem(80) rem(40);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.blog-page-cards :hover img {
+  transform: scale(1.5);
+}

@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.nav-pc {
+  color: $white;
+  display: none;
+  z-index: 20;
+  @include mq(md) {
+    display: block;
+    height: rem(90);
+  }
+}
+
+.nav-pc__items {
+  display: flex;
+  text-align: center;
+  height: inherit;
+  gap: rem(40);
+}
+.nav-pc__items a {
+  position: relative;
+
+  display: flex;
+  text-align: center;
+  height: rem(90);
+  justify-content: center;
+  flex-direction: column;
+}
+.nav-pc__items li {
+  position: relative;
+  font-weight: $regular;
+  font-size: rem(18);
+  @include mq(md) {
+  }
+}
+.nav-pc__items :last-child {
+  padding-right: 0;
+}
+
+.nav-pc__items li a::after {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  /*線の形状*/
+  width: 80%;
+  height: 2px;
+  background: #fff;
+  /*アニメーションの指定*/
+  transition: all 0.3s;
+  transform: scale(0, 1); /*X方向0、Y方向1*/
+  transform-origin: center top; /*上部中央基点*/
+  margin: 0 0 rem(20) 0;
+}
+.nav-pc__items li :hover::after {
+  transform: scale(1, 1); /*X方向にスケール拡大*/
+}
+
+.nav-pc__item-title {
+  font-weight: $regular;
+  font-family: $second-font-family;
+  font-size: rem(18);
+  line-height: 1;
+  @include mq(md) {
+    font-weight: $regular;
+    font-family: $second-font-family;
+    font-size: rem(18);
+    line-height: 1;
+  }
+}
+
+.nav-pc__items-subtitle {
+  font-weight: $regular;
+  font-family: $base-font-family;
+  font-size: rem(10);
+  line-height: 1;
+  margin-top: rem(4);
+  @include mq(md) {
+    font-weight: $regular;
+    font-family: $base-font-family;
+    font-size: rem(10);
+    line-height: 1;
+    margin-top: rem(4);
+  }
+}

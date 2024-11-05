@@ -1,0 +1,65 @@
+@use "global" as *;
+
+@use "global" as *;
+
+.sidebar-popularity-card {
+  box-shadow: rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
+  font-family: $base-font-family;
+  background-color: $white;
+  padding-top: rem(16);
+  padding-right: rem(16);
+  padding-left: rem(16);
+  padding-bottom: rem(16);
+  gap: rem(16);
+  display: grid;
+  grid-template-columns: rem(121) auto;
+
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: rem(121) auto;
+    padding: rem(16) rem(16) rem(16) rem(16);
+    margin-top: 0;
+  }
+}
+
+.sidebar-popularity-card__header {
+  aspect-ratio: 301 / 201;
+  object-fit: cover;
+  text-align: center;
+
+  @include mq(md) {}
+}
+
+.sidebar-popularity-card__header img {
+  object-fit: cover;
+}
+
+.sidebar-popularity-card__body {
+  width: 100%;
+
+  @include mq(md) {
+    width: 100%;
+  }
+}
+
+.sidebar-popularity-card__date {
+  font-family: $second-font-family;
+  line-height: 1;
+  font-size: rem(12);
+
+  @include mq(md) {
+    font-size: rem(12);
+    line-height: 1;
+    padding: 0;
+  }
+}
+
+.sidebar-popularity-card__title {
+  font-family: $base-font-family;
+  font-size: rem(16);
+
+  @include mq(md) {
+    font-size: rem(16);
+    margin: 0;
+  }
+}

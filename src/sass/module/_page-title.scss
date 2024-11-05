@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.page-title{
+  position: absolute;
+  top:calc(50% + rem(240));
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-weight:$regular;
+  font-size: rem(40);
+  color: $white;
+  font-family: $third-font-family;
+  @include mq(md) {
+    position: absolute;
+    font-size: rem(80);
+    top: calc(50% + rem(320));
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.page-title::first-letter{
+  text-transform: capitalize;
+}
+

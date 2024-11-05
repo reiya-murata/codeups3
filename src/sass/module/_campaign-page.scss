@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.campaign-page {
+  position: relative;
+}
+
+.campaign-page__hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  @include mq(md) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.campaign-page__main-img {
+  object-fit: cover;
+}
+
+.campaign-page__main-img::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #408F95;
+}
+
+.campaign-page__main-img img {
+  display: block;
+  width: 100vw;
+  object-fit: cover;
+  background-position: center;
+
+  @include mq(md) {
+    width: 100vw;
+    height: rem(548);
+  }
+}
+
+.campaign-page__inner {
+  position: relative;
+}
+.campaign-page__category{
+  margin-top: rem(8);
+}
+
+
+.campaign-page__tab-menu {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  margin-top: rem(52);
+
+  @include mq(md) {
+    justify-content: start;
+    flex-direction: initial;
+    gap: rem(32);
+    margin-top: rem(150);
+  }
+}
+
+.campaign-page__slides {
+  display: none;
+}
+
+.campaign-page__slides.active {
+  display: grid;
+  gap: rem(40);
+  margin-top: rem(40);
+
+  @include mq(md) {
+    gap: rem(80) rem(40);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+.campaign-page__button {
+  margin-top: rem(80);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

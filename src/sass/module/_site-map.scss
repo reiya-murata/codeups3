@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.site-map {
+  position: relative;
+}
+
+.site-map__hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  @include mq(md) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.site-map__inner {
+  position: relative;
+  @include mq(md) {
+   position: static;
+  }
+}
+
+.site-map__contents {
+  margin-top: rem(0);
+  @include mq(md) {
+    margin-top: rem(150);
+  }
+}
+
+.site-map__nav {
+  background-color: $white;
+}
+
+.site-map__nav ul {
+  color: $black;
+}
+
+.site-map__nav .nav__item--bold ::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../images/common/_hitode-black.svg");
+  width: rem(20);
+  height: rem(20);
+  background-repeat: no-repeat;
+  left: rem(-23);
+  top: rem(0);
+}

@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.blog-detail {
+  position: relative;
+}
+
+.blog-detail__inner {
+  position: relative;
+}
+.blog-detail__category{
+  margin-top: rem(8);
+}
+
+.blog-detail__hero {
+  position: relative;
+}
+
+
+.blog-detail__title {
+  margin-top: rem(8);
+}
+
+.blog-detail__contents {
+  margin-top: rem(52);
+
+  @include mq(md) {
+    margin-top: rem(150);
+  }
+}
+
+.blog-detail__content {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.blog-detail__img {
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__img img {
+  object-fit: cover;
+}
+
+.blog-detail__text {
+  margin-top: rem(40);
+  font-size: rem(16);
+}
+
+.blog-detail__list {
+  margin-top: rem(40);
+}
+
+.blog-detail__list li {
+  position: relative;
+  margin-left: rem(27);
+}
+
+.blog-detail__list li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../images/common/hitode.svg");
+  width: rem(16);
+  height: rem(16);
+  background-repeat: no-repeat;
+  left: rem(-23);
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.blog-detail__button {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.logo__img-codeups {
+  display: block;
+  display: flex;
+  justify-content: center;
+  width: rem(110);
+  z-index: 25;
+  aspect-ratio: 133 / 50;
+  @include mq(md) {
+    width: rem(140);
+  }
+}

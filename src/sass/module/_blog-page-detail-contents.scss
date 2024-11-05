@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.blog-detail-content {
+  @include mq(md) {
+    display: grid;
+    grid-row: 1;
+    grid-template-columns: 65% 27%;
+    gap: rem(86);
+  }
+}

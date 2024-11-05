@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.blog-page-sidebar {
+  width: 100%;
+}
+
+.blog-page-sidebar__popularity {
+  position: relative;
+
+  @include mq(md) {
+    margin-top: rem(150);
+  }
+}
+
+.blog-page-sidebar__popularity--detail {
+  margin-top: rem(-40);
+  @include mq(md) {
+    margin-top: rem(-100);
+  }
+}
+
+.blog-page-sidebar__review {
+  position: relative;
+  margin-top: rem(80);
+
+  @include mq(md) {}
+}
+
+.blog-page-sidebar__campaign {
+  position: relative;
+  margin-top: rem(80);
+}
+
+.blog-page-sidebar__archive {
+  position: relative;
+  margin-top: rem(80);
+}

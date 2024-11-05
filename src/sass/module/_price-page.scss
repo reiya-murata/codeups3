@@ -1,0 +1,122 @@
+@use "global" as *;
+
+.price-page {
+  position: relative;
+}
+
+.price-page__hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  @include mq(md) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.price-page__inner {
+  position: relative;
+}
+
+.price-page__contents{
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(52);
+  gap:  rem(40);
+  @include mq(md) {
+    margin-top: rem(156);
+    gap: rem(80);
+  }
+}
+.price-page__category{
+  align-items: center;
+  grid-row: 1/2;
+  grid-column: 1 / span 2;
+  position: relative;
+  background-color: $blue;
+  color: $white;
+  font-weight: $bold;
+  font-family: $base-font-family;
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  padding-left: rem(16);
+  @include mq(md) {
+    grid-column: 1;
+    padding-top: rem(41);
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+}
+.price-page__category p{
+  position: relative;
+  display: inline;
+}
+.price-page__category p::before{
+  display: inline-block;
+  content: "";
+  background-image: url("../images/common/whale-right-white-sp.svg");
+  object-fit: cover;
+  position: absolute;
+  width: rem(24);
+  height: rem(24);
+  top: 50%;
+  left: -15%;
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    background-image: url("../images/common/whale-right-white.svg");
+    width: rem(64);
+    height: rem(64);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: calc(50% + rem(56));
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.price-page__menu li{
+  align-items: center;
+  display: grid;
+  grid-row: inherit;
+  grid-row: 2;
+  grid-template-columns: rem(240);
+  grid-column: 1;
+  grid-template-rows: rem(64);
+  text-align: center;
+  border: 1px solid $blue;
+  @include mq(md) {
+    grid-row: 1;
+    grid-column: 2;
+    grid-template-columns: auto;
+    grid-template-rows: rem(60);
+    text-align: start;
+    padding-left: rem(16);
+  }
+}
+.price-page__menu br{
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.price-page__price li{
+  align-items: center;
+  display: grid;
+  grid-row: 2;
+  grid-column: 2;
+  grid-template-columns: auto;
+  grid-template-rows: rem(64);
+  padding-left: rem(20);
+  padding-right: rem(20);
+  text-align: center;
+  border: 1px solid $blue;
+  @include mq(md) {
+    display: grid;
+    grid-column: 3;
+    grid-row: 1;
+    grid-template-rows: rem(60);
+    text-align: end;
+    padding-left: rem(16);
+  }
+}

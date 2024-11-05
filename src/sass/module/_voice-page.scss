@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.voice-page{
+  position: relative;
+}
+.voice-page__inner{
+  position: relative;
+}
+
+.voice-page__hero{
+  position: relative;
+}
+
+.voice-page__category{
+  margin-top: rem(8);
+}
+.voice-page__contents{
+  margin-top: rem(52);
+  @include mq(md) {
+    margin-top: rem(150);
+  }
+}
+.voice--page__cards{
+  margin-top: rem(40);
+}
+
+.voice-page__slide-button{
+  margin-top: rem(72);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+

@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.information-page {
+  position: relative;
+}
+
+.information-page__hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  @include mq(md) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.information-page__inner {
+  position: relative;
+}
+.information-page__category{
+  margin-top: rem(8);
+}
+.information-page__tab-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: rem(121);
+
+  @include mq(md) {
+    margin-top: rem(150);
+  }
+}
+
+.information-page__tab-icon {
+  position: relative;
+  text-align: center;
+  width: rem(102);
+  padding-top: rem(10);
+  padding-bottom: rem(10);
+  padding-left: rem(16);
+  padding-right: rem(16);
+  background-color: #DDF0F1;
+  color: $blue;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-weight: $regular;
+
+  @include mq(md) {
+    text-align: end;
+    width: rem(300);
+    padding-top: rem(29);
+    padding-bottom: rem(26);
+    padding-right: rem(30);
+    font-size: rem(24);
+  }
+}
+
+.information-page__tab-icon.active {
+  color: $white;
+  background-color: $blue;
+  stroke: $white;
+}
+
+.information-page__tabs {
+  display: none;
+}
+
+.information-page__tabs.active {
+  display: block;
+}

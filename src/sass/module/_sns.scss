@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.sns {
+  display: flex;
+  position: relative;
+  margin-top: rem(16);
+  @include mq(md) {
+    position: relative;
+    margin-top: rem(38);
+    margin-left: rem(40);
+  }
+}
+.sns__instagram {
+  z-index: 10;
+  width: rem(24);
+  margin-left: rem(16);
+  @include mq(md) {
+    width: rem(32);
+    z-index: 10;
+    margin-left: rem(16);
+  }
+}
+.sns__facebook {
+  z-index: 10;
+  width: rem(24);
+  @include mq(md) {
+    width: rem(32);
+    z-index: 10;
+  }
+}

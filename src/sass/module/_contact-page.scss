@@ -1,0 +1,20 @@
+@use "global" as *;
+.contact-page {
+  position: relative;
+}
+
+.contact-page__hero {
+  position: relative;
+}
+.contact-page__inner{
+  position: relative;
+}
+.contact-page__category{
+  margin-top: rem(8);
+}
+.contact-page__contents{
+  margin-top: rem(52);
+  @include mq("md") {
+    margin-top: rem(150);
+  }
+}

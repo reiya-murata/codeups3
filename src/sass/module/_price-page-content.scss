@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.price-page-content{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: auto;
+  @include mq(md) {
+    grid-template-columns: rem(200) rem(340) rem(162);
+  }
+}

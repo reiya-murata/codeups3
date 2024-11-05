@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.campaign-slide {
+  text-align: center;
+  // width: 100%; /* スライドの幅を調整 */
+  // height: 100%; /* スライドの高さを調整 */
+  // display: flex; /* スライド内の要素を横並びに配置する場合 */
+   /* スライド内の要素を垂直方向に中央揃えする場合 */
+  justify-content: center; /* スライド内の要素を水平方向に中央揃えする場合 */
+  width: rem(280);
+  margin: 0;
+  display: block;
+    height: auto;
+  @include mq(md) {
+    width: rem(333);
+    display: flex;
+  align-items: stretch;
+  flex-grow: 1; /* スライド内の各要素を均等に伸縮 */
+  height: auto; /* スライド内の各要素の高さを100%に設定 */
+    margin: 0;
+  }
+}
+
+.campaign-slide a:hover{
+  opacity: 0.5;
+}

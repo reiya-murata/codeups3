@@ -1,0 +1,154 @@
+@use "global" as *;
+
+.price {
+  background-color: #ddf0f1;
+  position: relative;
+  box-shadow: 0 rem(2) rem(5) 0 rgba(0, 0, 0, 0.5);
+  @include mq(md) {
+    box-shadow: none;
+  }
+}
+
+.price::before {
+  display: none;
+  @include mq(md) {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("../images/common/_kingyohanadai 2.svg");
+    width: rem(437);
+    height: rem(201);
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    bottom: rem(54);
+    left: calc(50vw - min(48vw , 38.6rem));
+    z-index: 20;
+  }
+}
+
+.price__inner {
+  position: relative;
+  align-items: center;
+  margin: auto;
+  @include mq(md) {
+    margin: auto;
+    flex-direction: initial;
+    justify-content: space-between;
+  }
+}
+
+.price__contents {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(46);
+    flex-direction: inherit;
+    justify-content: space-between;
+  }
+}
+
+.price__contents-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: rem(600);
+  @include mq(md) {
+    justify-content: start;
+    width: rem(494);
+    display: flex;
+    padding: 0;
+    align-self: start;
+    flex-direction: column;
+  }
+}
+
+.price__contents-right {
+  display: block;
+  max-width: rem(600);
+  @include mq(md) {
+    align-self: start;
+    width: rem(492);
+    display: block;
+  }
+}
+
+.price__content {
+  width: 100%;
+  font-family: $base-font-family;
+  @include mq(md) {
+    width: 100%;
+    max-width: 100%;
+    margin: rem(40) 0 0;
+  }
+}
+
+.price__img {
+  object-fit: cover;
+  width: rem(345);
+  height: rem(227);
+  @include mq(md) {
+    aspect-ratio: 746 /492;
+    width: rem(492);
+    height: rem(746);
+  }
+}
+
+.price__content-title {
+  font-family: $base-font-family;
+  font-weight: $bold;
+  border-bottom: 1px solid $blue;
+  padding-bottom: rem(4);
+  margin-top: rem(40);
+  @include mq(md) {
+    margin: 0 0 rem(3) 0;
+    line-height: 1;
+    font-size: rem(16);
+    padding: 0 0 rem(8) rem(2);
+  }
+}
+
+.price__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__item-title {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  padding-top: rem(8);
+  padding-bottom: rem(2.8);
+  max-width: rem(280);
+  @include mq(md) {
+    max-width: rem(300);
+    font-size: rem(16);
+    line-height: 1;
+    font-weight: $normal;
+    padding: rem(8) 0 rem(8) rem(2);
+  }
+}
+
+.price__item-price {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  padding-top: rem(10);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: 1;
+    font-weight: $normal;
+    padding: rem(8) 0;
+  }
+}
+
+.price__button {
+  margin-top: rem(40);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.tab-menu{
+  display: flex;
+  gap:rem(32);
+  justify-content: center;
+}
+
+.tab-menu__icon {
+  font-size: rem(14);
+  width: rem(162);
+  text-align: center;
+
+  @include mq(md) {
+    width: rem(162);
+  }
+}
+
+.tab-menu__icon.active {
+  background-color: $blue;
+  color: $white;
+}
+
+.tab-menu.active {
+  display: block;
+}

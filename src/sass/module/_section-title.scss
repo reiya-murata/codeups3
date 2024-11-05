@@ -1,0 +1,118 @@
+@use "global" as *;
+
+.section-title__main {
+  font-size: rem(32);
+  font-weight: $regular;
+  font-family: $second-font-family;
+  text-align: center;
+  color: $black;
+  text-shadow: rem(2) rem(2) rem(4) rgba(0, 0, 0, 0.5);
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: 1;
+    font-weight: $regular;
+    text-shadow: none;
+  }
+}
+
+.section-title__main::first-letter {
+  color: $blue;
+  font-weight: $regular;
+  text-transform: capitalize;
+  @include mq(md) {
+    color: $blue;
+  }
+}
+
+.section-title__sub {
+  font-family: $base-font-family;
+  color: $blue;
+  font-size: rem(12);
+  font-weight: $regular;
+  text-align: center;
+  margin-top: rem(4);
+  @include mq(md) {
+    margin-top: rem(10);
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: 1;
+    text-shadow: none;
+  }
+}
+.information .section-title__sub {
+  text-shadow: none;
+}
+.price .section-title__sub {
+  text-shadow: none;
+}
+
+.section-title__sub--campaign {
+  font-family: $base-font-family;
+  color: $blue;
+  font-size: rem(12);
+  font-weight: $regular;
+  text-align: center;
+  text-shadow: rem(2) rem(2) rem(4) rgba(0, 0, 0, 0.5);
+  @include mq(md) {
+    margin: rem(8) rem(12) 0 0;
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: 1;
+    text-shadow: none;
+  }
+}
+
+.information .section-title__main {
+  text-shadow: none;
+}
+
+.section-title--blog .section-title__main::first-letter {
+  color: $blue;
+  font-weight: $regular;
+  text-transform: capitalize;
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.section-title--blog .section-title__main {
+  @include mq(md) {
+    color: $white;
+  }
+}
+.section-title--blog .section-title__sub {
+  font-family: $base-font-family;
+  color: $blue;
+  text-shadow: rem(2) rem(2) rem(4) rgba(0, 0, 0, 0.5);
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.price .section-title__main {
+  text-shadow: none;
+}
+
+.section-title--contact .section-title__main{
+  position: relative;
+  font-size: rem(80);
+  text-shadow: rem(2) rem(2) rem(4) rgba(0, 0, 0, 0.5);
+  @include mq(md) {
+    font-size: rem(80);
+    margin-top: rem(20);
+    text-shadow: none;
+  }
+}
+
+.section-title--contact .section-title__main::first-letter {
+  color: $blue;
+  font-weight: $regular;
+}
+
+.section-title--contact .section-title__sub {
+  margin-top: rem(-4);
+  @include mq(md) {
+    padding: 0;
+    margin-top: rem(4);
+  }
+}

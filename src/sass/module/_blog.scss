@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.blog {
+  position: relative;
+  @include mq(md) {
+  }
+}
+.blog::before {
+  display: none;
+  @include mq(md) {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("../images/common/_kingyohanadai.svg");
+    width: rem(437);
+    height: rem(201);
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    top: rem(24);
+    left: calc(50vw - min(48vw , 38.8rem));
+    z-index: 20;
+  }
+}
+.blog::after {
+  display: none;
+  @include mq(md) {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("../images/common/_kingyohanadai-right.svg");
+    width: rem(301);
+    height: rem(138);
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    bottom: rem(-165);
+    left: calc(50vw - min(48vw , 38.8rem));
+    z-index: 20;
+  }
+}
+
+
+
+.blog__inner {
+  padding-left: rem(21);
+  padding-right: rem(21);
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.blog__bg-img {
+  display: none;
+  @include mq(md) {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    display: block;
+    margin-top: 0;
+  }
+}
+.blog__bg-img img {
+  @include mq(md) {
+    z-index: 1;
+    height: rem(500);
+    max-height: 500px;
+    width: 100vw;
+    display: block;
+    object-fit: cover;
+  }
+}
+.blog__cards {
+  margin-top: rem(-8);
+  @include mq(md) {
+    margin-top: rem(84);
+  }
+}
+
+.blog__button {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(84);
+  }
+}

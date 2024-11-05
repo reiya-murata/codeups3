@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.privacy {
+  position: relative;
+}
+
+.privacy__hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  @include mq(md) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.privacy__category{
+  margin-top: rem(8);
+}
+.privacy__inner {
+  position: relative;
+}
+
+.privacy__contents {
+  margin-top: rem(52);
+  max-width: rem(375);
+  @include mq(md) {
+    margin-top: rem(173);
+    max-width: rem(850);
+  }
+}
+
+.privacy__title {
+  font-style: $base-font-family;
+  font-size: rem(24);
+  font-weight: $bold;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.privacy__text {
+  margin-top: rem(40);
+  line-height: rem(32);
+  font-size: rem(16);
+}
+
+.privacy__text li {
+  display: flex;
+}

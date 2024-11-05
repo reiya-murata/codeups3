@@ -1,0 +1,83 @@
+@use "global" as *;
+
+.header {
+  position: fixed;
+  width: 100%;
+  background: #0d293689;
+  display: flex;
+  justify-content: space-between;
+  z-index: 20;
+  text-align: center;
+  align-items: center;
+  height: rem(80);
+  @include mq(md) {
+    position: fixed;
+    height: rem(90);
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: inherit;
+  justify-content: space-between;
+  padding: 0 rem(15);
+  z-index: 20;
+  background: transparent;
+  @include mq(md) {
+    width: 100%;
+    height: inherit;
+    padding: 0 rem(40);
+  }
+}
+
+.header__inner-logo {
+  align-items: center;
+  height: inherit;
+}
+
+.header__inner-logo a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: inherit;
+  @include mq(md) {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+}
+.header__home {
+  display: none;
+  position: fixed;
+  display: flex;
+  bottom: rem(16);
+  right: rem(16);
+  @include mq(md) {
+    display: none;
+    bottom: rem(20);
+    right: rem(16);
+    width: rem(90);
+    height: rem(90);
+  }
+}
+.header__home a {
+  width: rem(48);
+  @include mq(md) {
+    width: rem(90);
+  }
+}
+
+.header.active {
+  position: fixed;
+  z-index: 15;
+}
+.active.header__inner {
+  z-index: 20;
+}
+
+

@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.footer {
+  position: relative;
+  background-color: $blue;
+  // margin-top: rem(100);
+  @include mq(md) {
+    // margin-top: rem(4);
+  }
+}
+
+
+.footer__inner {
+  width: 100%;
+  @include mq(md) {
+  }
+}
+
+.footer__copyright {
+  font-family: $second-font-family;
+  font-weight: $normal;
+  text-align: center;
+  color: $white;
+  background-color: $blue;
+  font-size: rem(11.9);
+  margin-top:rem(40) ;
+  @include mq(md) {
+    font-size: rem(14);
+    line-height: 1;
+    margin-top: rem(100);
+  }
+}

@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.sidebar-campaign-card {
+  grid-template-columns: auto;
+  grid-row: 1;
+  box-shadow: rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
+  text-align: center;
+  @include mq(md) {
+  }
+}
+.sidebar-campaign-card a {
+  flex-direction: column;
+}
+
+.sidebar-campaign-card__header img {
+  aspect-ratio: 333 /223;
+  object-fit: cover;
+  @include mq(md) {
+    width: 100%;
+  }
+}
+
+
+.sidebar-campaign-card__body {
+  padding: rem(16) rem(41) rem(24);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  text-align: center ;
+  @include mq(md) {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.sidebar-campaign-card__title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-bottom: rem(1) solid $blue;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  margin: 0;
+  margin-top: rem(4);
+  padding-bottom: rem(6);
+  letter-spacing: -0.18em;
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: -0.18em;
+    margin-top: rem(4);
+    padding-bottom: rem(8);
+  }
+}
+
+
+
+.sidebar-campaign-card__prices {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: rem(16);
+  margin-top: rem(8);
+  align-items: center;
+  font-family: $third-font-family;
+  @include mq(md) {
+    gap: rem(24);
+  }
+}
+.sidebar-campaign-card__price {
+  font-family: $third-font-family;
+  font-weight: $bold;
+  text-decoration: line-through red rem(3);
+  // margin-top: rem(6);
+  font-size: rem(20);
+  line-height: 2;
+  @include mq(md) {
+    font-family: $third-font-family;
+    font-size: rem(24);
+    // margin-top: rem(8);
+    line-height: 1.8;
+  }
+}
+
+.sidebar-campaign-card__discount {
+  color: $blue;
+  font-weight: $bold;
+  font-family: $third-font-family;
+  font-size: rem(32);
+  line-height: 1;
+  @include mq(md) {
+    font-family: $third-font-family;
+    line-height: 1;
+  }
+}
+.sidebar-campaign-card__text{
+  margin-top: rem(16);
+  display: none;
+  font-family: $base-font-family;
+  line-height: 1;
+  font-size: rem(16);
+  @include mq(md) {
+    display: block;
+    line-height: 1.2em;
+  }
+}
+
+.sidebar-campaign-card__button{
+  margin-top: rem(40);
+  text-align: center;
+}

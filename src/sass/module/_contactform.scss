@@ -1,0 +1,248 @@
+@use "global" as *;
+
+.contactform {
+  display: flex;
+  flex-direction: column;
+  max-width: rem(345) ;
+  // padding-right: $padding-sp;
+  // padding-left: $padding-sp;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq("md") {
+    margin-right: rem(283);
+    max-width: rem(750);
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+
+.contactform__field {
+  border: none;
+  padding: 0;
+}
+
+.contactform__note{
+  text-align: center;
+  color: red;
+  display: none;
+  @include mq("md") {
+    text-align: center;
+  }
+}
+.contactform__note.active{
+  display: block;
+}
+
+.contactform__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: rem(16);
+  font-weight: $bold;
+  border-bottom: 1px dotted $blue;
+  padding-top: rem(16);
+  padding-bottom: rem(24);
+  gap: rem(16);
+
+  @include mq("md") {
+    gap: 0;
+    padding-top: rem(40);
+    padding-bottom: rem(58);
+  }
+}
+
+.contactform__item:first-child {
+  padding-top: 0;
+}
+
+.contactform__item--radio {
+  justify-content: start;
+  z-index: 10;
+
+  @include mq("md") {}
+}
+
+.contactform__item--radio input {
+  position: relative;
+  display: block;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.contactform__radio input[type="radio"]:checked {
+  content: "";
+  display: block;
+  position: relative;
+  background-image: url("../images/common/check.svg");
+  width: rem(194);
+  height: rem(181);
+  background-size: contain;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  width: rem(6);
+  height: rem(6);
+  z-index: 10;
+}
+
+
+
+.contactform__text {
+  width: rem(345);
+
+  @include mq("md") {
+    width: rem(480);
+  }
+}
+
+.contactform__item {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  @include mq("md") {
+    flex-direction: inherit;
+  }
+}
+
+.contactform input {
+  display: flex;
+  text-align: start;
+  border: 1px solid $blue;
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  padding-left: rem(16);
+
+  @include mq("md") {}
+}
+
+
+.contactform input::placeholder {
+  color: #DDF0F1;
+}
+
+.contactform__item.active input{
+  display: flex;
+  background-color: #c946006c;
+  text-align: start;
+  border: 1px solid red;
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  padding-left: rem(16);
+}
+.contactform__item.active textarea{
+  display: flex;
+  background-color: #c946006c;
+  text-align: start;
+  border: 1px solid red;
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  padding-left: rem(16);
+}
+
+.contactform__campaign{
+  position: relative;
+}
+
+
+
+
+.contactform select {
+  position: relative;
+  display: flex;
+  text-align: start;
+  border: 1px solid $blue;
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  padding-left: rem(8);
+  width: rem(345);
+  font-size: rem(12);
+
+  @include mq("md") {
+    width: rem(480);
+  }
+}
+
+.contactform-togle{
+  position: relative;
+}
+
+.contactform-togle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../images/common/Polygon3.svg");
+  background-size: contain;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  right: rem(6);
+  top: rem(50);
+  width: rem(16);
+  height: rem(16);
+  z-index: 0;
+}
+
+
+.contactform__radios {
+  display: flex;
+  gap: rem(4);
+  flex-direction: column;
+  justify-content: start;
+}
+
+.contactform__radio {
+  display: grid;
+  margin-left: rem(50);
+  gap: rem(8);
+  grid-template-columns: rem(20) 1fr;
+
+}
+
+
+.contactform__item textarea {
+  border: 1px solid $blue;
+  align-items: start;
+}
+
+.contactform__required {
+  background-color: red;
+  color: $white;
+  margin-left: rem(8);
+  padding-top: rem(2);
+  padding-bottom: rem(2);
+  padding-right: rem(16);
+  padding-left: rem(16);
+  font-weight: $regular;
+}
+
+.contact__checkbox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: rem(80);
+}
+
+.contact__checkbox p {
+  margin-left: rem(16);
+}
+
+input[type="checkbox"]{
+  width: rem(10);
+  height: rem(10);
+}
+input[type="checkbox"]:checked {
+  content: "";
+  display: block;
+  position: relative;
+  background-image: url("../images/common/check.svg");
+  background-size: contain;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  width: rem(6);
+  height: rem(6);
+  z-index: 10;
+}
+
+.contactform__button {
+  text-align: center;
+  margin-top: rem(40);
+}

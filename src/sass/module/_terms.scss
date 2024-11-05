@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.terms {
+  position: relative;
+}
+
+.terms__hero{
+  position: relative;
+  width: 100%;
+  height: auto;
+  @include mq(md) {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+}
+.terms__category{
+  margin-top: rem(8);
+}
+.terms__inner {
+  position: relative;
+}
+
+.terms__contents {
+  margin-top: rem(52);
+  max-width: rem(375);
+  @include mq(md) {
+    margin-top: rem(173);
+    max-width: rem(850);
+  }
+}
+
+.terms__title{
+  font-style: $base-font-family;
+  font-size: rem(24);
+  font-weight: $bold;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+.terms__text{
+  margin-top: rem(40);
+  line-height:rem(32);
+  font-size: rem(16);
+}
+.terms__text li{
+  display: flex;
+}
+
+
+

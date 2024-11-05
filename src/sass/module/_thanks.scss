@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.thanks {
+  position: relative;
+}
+
+.thanks__hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  @include mq(md) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.thanks__inner {
+  position: relative;
+}
+
+.thanks__contents {
+  margin-top: rem(52);
+
+  @include mq(md) {
+    margin-top: rem(150);
+  }
+}
+
+.thanks__content1 {
+  text-align: center;
+}
+
+.thanks__content2 {
+  text-align: center;
+  margin-top: rem(40);
+}
+
+.thanks__content-sp {
+  display:block;
+  @include mq(md) {
+    display: none;
+  }
+}

@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.sidebar {
+  grid-row: 2;
+
+  @include mq(md) {
+    grid-row: 1;
+    grid-column: 2;
+    margin-top: 0;
+  }
+}
+
+.sidebar-title {
+  position: relative;
+  font-size: rem(24);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  padding-left: rem(74);
+  border-left: 8px solid $blue;
+}
+
+.sidebar-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../images/common/whale-right-blue.svg");
+  width: rem(50);
+  height: rem(50);
+  background-size: contain;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: rem(16);
+  transform: translate(0, -50%);
+  z-index: 20;
+}
+
+.sidebar__popularity-cards {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  margin-top: rem(24);
+}
+
+.sidebar__review-cards {
+  margin-top: rem(24);
+}
+
+.sidebar__campaign-cards {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(24);
+  gap: rem(40);
+}
